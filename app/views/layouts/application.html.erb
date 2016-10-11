@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HanoiRoadhouse</title>
+    <title>Hanoi Roadhouse</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <div>
+      <h1><%= link_to "Hanoi Roadhouse", "/", class: "btn btn-primary" %></h1>
+    </div>
     <%= yield %>
   </body>
 </html>
