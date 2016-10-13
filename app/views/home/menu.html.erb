@@ -1,3 +1,11 @@
+<%# Begin tablesorter Javascript code #%>
+<script>
+$(function(){
+  $("#sortedTable").tablesorter();
+});
+</script>
+<%# End tablesorter Javascript code #%>
+
 <h1>Menu</h1>
 <ul class="nav nav-pills">
   <% Section.all.each do |section| %>
@@ -9,8 +17,24 @@
 </ul>
 
 <% if @section %>
-  <% @section.food_items.each do |food| %>
-    <%= link_to food.name, "#", class: "nav-link" %>
-    <p><%= food.description %></p>
-  <% end %>
+  <table id="sortedTable">
+    <thead>
+      <tr>
+        <th>Dish Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Picture</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @section.food_items.each do |food| %>
+    <tr>
+      <td><%= food.name %></td>
+      <td><%= food.description %></td>
+      <td><%= food.price %></td>
+      <td><%= image_tag(food.show_image_url) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
 <% end %>
