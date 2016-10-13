@@ -10,7 +10,7 @@
 
 <% if @section %>
   <% @section.food_items.each do |food| %>
-    <h3><%= food.name %></h3>
+    <%= link_to food.name, "#", class: "nav-link" %>
     <p><%= food.description %></p>
   <% end %>
 <% end %>
