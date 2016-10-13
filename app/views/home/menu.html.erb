@@ -17,7 +17,7 @@ $(function(){
 </ul>
 
 <% if @section %>
-  <table id="sortedTable">
+  <table class="table-hover col-sm-12" id="sortedTable">
     <thead>
       <tr>
         <th>Dish Name</th>
@@ -29,7 +29,7 @@ $(function(){
     <tbody>
     <% @section.food_items.each do |food| %>
     <tr>
-      <td><%= food.name %></td>
+      <td><%= link_to food.name, "#" %></td>
       <td><%= food.description %></td>
       <td><%= food.price %></td>
       <td><%= image_tag(food.show_image_url) %></td>
