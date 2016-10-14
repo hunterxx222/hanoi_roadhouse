@@ -17,13 +17,8 @@
 
 <p>
   <strong>Image url:</strong>
+  <%= image_tag(@food_item.show_image_url) %>
   <%= @food_item.image_url %>
 </p>
 
-<p>
-  <strong>Section:</strong>
-  <%= @food_item.section %>
-</p>
-
-<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
-<%= link_to 'Back', food_items_path %>
+<%= link_to 'Back', menu_path(section: @food_item.section.name) %>

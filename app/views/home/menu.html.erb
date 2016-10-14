@@ -21,7 +21,6 @@ $(function(){
     <thead>
       <tr>
         <th>Dish Name</th>
-        <th>Description</th>
         <th>Price</th>
         <th>Picture</th>
       </tr>
@@ -29,8 +28,7 @@ $(function(){
     <tbody>
     <% @section.food_items.each do |food| %>
     <tr>
-      <td><%= link_to food.name, "#" %></td>
-      <td><%= food.description %></td>
+      <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
       <td><%= food.price %></td>
       <td><%= image_tag(food.show_image_url) %></td>
     </tr>
