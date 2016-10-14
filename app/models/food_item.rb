@@ -1,4 +1,5 @@
 class FoodItem < ApplicationRecord
+  has_many :orders, dependent: :destroy
   belongs_to :section
   validates :name, :section, :price, presence: true
 

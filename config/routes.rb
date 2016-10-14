@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :food_items
+  resources :food_items do
+    # food_items/:food_item_id/orders/new
+    resources :orders
+  end
   root 'home#index'
   get 'menu' => 'home#menu'
   get 'contact_us' => 'home#contact_us'

@@ -17,22 +17,28 @@ $(function(){
 </ul>
 
 <% if @section %>
-  <table class="table-hover col-sm-12" id="sortedTable">
-    <thead>
+  <div class="table-responsive">
+    <table class="table-hover col-sm-12" id="sortedTable">
+      <thead>
+        <tr>
+          <th>Dish Name</th>
+          <th>Price</th>
+          <th>Picture</th>
+          <th>Order</th>
+          <th>Number of Orders</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @section.food_items.each do |food| %>
       <tr>
-        <th>Dish Name</th>
-        <th>Price</th>
-        <th>Picture</th>
+        <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
+        <td><%= food.price %></td>
+        <td><%= image_tag(food.show_image_url,height: '100') %></td>
+        <td><%= link_to "Order", "#", class: "btn btn-primary" %></td>
+        <td><%= food.orders.size %></td>
       </tr>
-    </thead>
-    <tbody>
-    <% @section.food_items.each do |food| %>
-    <tr>
-      <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
-      <td><%= food.price %></td>
-      <td><%= image_tag(food.show_image_url,height: '100') %></td>
-    </tr>
-    <% end %>
-  </tbody>
-  </table>
+      <% end %>
+    </tbody>
+    </table>
+  </div>
 <% end %>
