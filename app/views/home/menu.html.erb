@@ -30,7 +30,7 @@ $(function(){
     <tr>
       <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
       <td><%= food.price %></td>
-      <td><%= image_tag(food.show_image_url) %></td>
+      <td><%= image_tag(food.show_image_url,height: '100') %></td>
     </tr>
     <% end %>
   </tbody>

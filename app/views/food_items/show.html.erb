@@ -21,4 +21,8 @@
   <%= @food_item.image_url %>
 </p>
 
+<p>
+  <strong>Section</strong>
+  <%= @food_item.section %>
+  
 <%= link_to 'Back', menu_path(section: @food_item.section.name) %>
