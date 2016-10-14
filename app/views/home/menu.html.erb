@@ -34,7 +34,7 @@ $(function(){
         <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
         <td><%= food.price %></td>
         <td><%= image_tag(food.show_image_url,height: '100') %></td>
-        <td><%= link_to "Order", "#", class: "btn btn-primary" %></td>
+        <td><%= link_to "Order", new_food_item_order_path(food.id), class: "btn btn-primary" %></td>
         <td><%= food.orders.size %></td>
       </tr>
       <% end %>
