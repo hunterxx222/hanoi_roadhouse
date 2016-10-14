@@ -18,6 +18,7 @@
             <%= f.text_area :address, class: "form-control"  %>
       </fieldset>
       <%= f.submit "Submit Order", class: "btn btn-primary" %>
+      <%= link_to "Back", menu_path(section: @food_item.section.name), class: "btn btn-secondary" %>
     <% end %>
   </div>
 </div>
