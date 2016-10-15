@@ -64,7 +64,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+There are challenges:
+1. MVP system in rails. As I'm new, MVP system in rails are still need to be figured out and can cause a lot of headaches. However, it can also be a great way to learn things.
+2. Getting the order system to work. 
 
 ## License
 
