@@ -1,3 +1,7 @@
 <h1>Welcome to Hanoi Roadhouse</h1>
-<%= link_to "Menu", menu_path %>
-<%= link_to "Contact Us", contact_us_path %>
+
+<% if @food_items.present? %>
+  <%= render @food_items %>
+<% elsif params[:search] %>
+  <p>There are no food item containing the term(s) <%= params[:search] %>.</p>
+<% end %>
