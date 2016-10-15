@@ -48,7 +48,8 @@ URL: https://evening-coast-65700.herokuapp.com
 
 The following **additional** features are implemented:
 
-* [ ] Something nice you added.
+* [x] A background & picture for the restaurant
+* [x] Furnishes some CSS codes to make the app look a bit nicer
 
 The following **known issues**:
 
@@ -65,8 +66,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 There are challenges:
+
 1. MVP system in rails. As I'm new, MVP system in rails are still need to be figured out and can cause a lot of headaches. However, it can also be a great way to learn things.
-2. Getting the order system to work. 
+
+2. Getting the order system to work.
 
 ## License
 
