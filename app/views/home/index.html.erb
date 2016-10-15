@@ -1,7 +1,21 @@
 <h1>Welcome to Hanoi Roadhouse</h1>
 
 <% if @food_items.present? %>
+<div class="table-responsive">
+  <table class="table-hover col-sm-12" id="sortedTable">
+  <thead>
+    <tr>
+      <th>Dish Name</th>
+      <th>Price</th>
+      <th>Picture</th>
+      <th>Order</th>
+      <th>Number of Orders</th>
+    </tr>
+  </thead>
+  <tbody>
   <%= render @food_items %>
+  </tbody>
+  </table>
 <% elsif params[:search] %>
   <p>There are no food item containing the term(s) <%= params[:search] %>.</p>
 <% end %>

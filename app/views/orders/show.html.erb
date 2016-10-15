@@ -1,3 +1,4 @@
+<h1>Thank you for your order</h1>
 <p>
   <strong>Name: </strong>
   <%= @order.name %>
@@ -24,5 +25,8 @@
 </p>
 
 <p>
-  <strong>Shipping: 20,000</strong>
+  <strong>Shipping: </strong>20,000
+</p>
+<p>
+  <strong>Total Price: </strong> <%= @order.food_item.price + 20000 %>
 </p>

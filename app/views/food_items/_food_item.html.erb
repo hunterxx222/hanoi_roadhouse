@@ -1,25 +1,7 @@
-<h1>Food Items</h1>
-
-<div class="table-responsive">
-  <table class="table-hover col-sm-12" id="sortedTable">
-    <thead>
-      <tr>
-        <th>Dish Name</th>
-        <th>Price</th>
-        <th>Picture</th>
-        <th>Order</th>
-        <th>Number of Orders</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @food_items.each do |food| %>
     <tr>
-      <td><%= link_to food.name, food_items_path+"/#{food.id}" %></td>
-      <td><%= food.price %></td>
-      <td><%= image_tag(food.show_image_url,height: '100') %></td>
-      <td><%= link_to "Order", new_food_item_order_path(food.id), class: "btn btn-primary" %></td>
-      <td><%= food.orders.size %></td>
+      <td><%= link_to food_item.name, food_items_path+"/#{food_item.id}" %></td>
+      <td><%= food_item.price %></td>
+      <td><%= image_tag(food_item.show_image_url,height: '100') %></td>
+      <td><%= link_to "Order", new_food_item_order_path(food_item.id), class: "btn btn-primary" %></td>
+      <td><%= food_item.orders.size %></td>
     </tr>
-    <% end %>
-    </tbody
-  </table>
