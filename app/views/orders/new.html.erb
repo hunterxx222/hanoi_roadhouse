@@ -16,10 +16,9 @@
           <fieldset class="form-group">
             <%= f.label :address  %>
             <%= f.text_area :address, class: "form-control"  %>
-      </fieldset>
+          </fieldset>
       <%= f.submit "Submit Order", class: "btn btn-primary" %>
       <%= link_to "Back", menu_path(section: @food_item.section.name), class: "btn btn-secondary" %>
-      <%= link_to "Show", food_item_order_path(id: 1) %>
     <% end %>
   </div>
 </div>
